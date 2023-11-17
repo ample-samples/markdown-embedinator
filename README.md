@@ -120,11 +120,21 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [x] Allow user to input markdown
-- [ ] Save the markdown to db
-  - [ ] Generate key specific to markdown user saves
-- [ ] Recall saved markdown using key
-  - [ ] generate embed using key
+- [] Next App
+  - [] md editor
+  - [] Widget
+    - [] when called with id, sends id to server
+    - [] render the response html
+- [] Server
+  - [] accept the md text value
+  - [] assign a unique id/key to the md text
+  - [] send md text + id to db
+  - [] accept call from widget with id
+    - [] retrieve assoc. md text from db
+    - [] convert md text to html
+    - [] send html to widget
+- [] Database - ElephantSQL
+  - set up to store md text values with assoc. id
 
 See the [open issues](https://github.com/procrastian/repo_name/issues) for a full list of proposed features (and known issues).
 
