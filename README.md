@@ -127,13 +127,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [] render the response html
 - [] Server
   - [] accept the md text value
-  - [] assign a unique id/key to the md text
-  - [] send md text + id to db
+  - [] convert md text to html
+  - [] assign a unique id/key to the html text
+  - [] send html text + id to db
   - [] accept call from widget with id
-    - [] retrieve assoc. md text from db
-    - [] convert md text to html
+    - [] retrieve assoc. html text from db
     - [] send html to widget
-- [] Database - ElephantSQL
+- [] Database - Vercel
   - set up to store md text values with assoc. id
 
 See the [open issues](https://github.com/procrastian/repo_name/issues) for a full list of proposed features (and known issues).

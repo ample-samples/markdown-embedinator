@@ -1,11 +1,23 @@
-import prisma from '@/lib/prisma'
+import prisma from "@/lib/prisma";
 
-async function getArticles() {
-	const articles = await prisma.article.findMany();
-	return articles;
+async function getArticleByUUID(id: string) {
+  const article = await prisma.article.findUnique({
+    where: {
+      id: id,
+    },
+  });
+  return article?.body;
 }
 
-export const dynamic = 'force-dynamic' // defaults to force-static
-export async function GET(request: Request, { params }: { params: { id: string } }) {
-	return Response.json({ data: params.id, articles: await getArticles() });
+// async function postArticle() {
+
+// }
+
+export const dynamic = "force-dynamic"; // defaults to force-static
+export async function GET(
+  request: Request,
+  { params }: { params: { id: string } }
+) {
+  return Response.json(await getArticleByUUID(params.id));
 }
+// export async function POST()
