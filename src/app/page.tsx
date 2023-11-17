@@ -3,6 +3,8 @@ import { useState } from 'react';
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
 import dynamic from "next/dynamic";
+import {Button, ButtonGroup} from "@nextui-org/react";
+
 
 import * as commands from "@uiw/react-md-editor/commands"
 
@@ -24,6 +26,11 @@ export default function Home() {
           style={{ height: "100vh" }}
         />
       </div>
+          <ButtonGroup>
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
     </main>
   )
 }

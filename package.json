@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.9",
     "@uiw/react-md-editor": "^3.6.0",
+    "framer-motion": "^10.16.5",
     "next": "14.0.3",
     "next-remove-imports": "^1.0.12",
     "react": "^18",
