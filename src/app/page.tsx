@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <main className="flex h-screen flex-row items-center justify-between p-24">
-      <div className="grid container auto-rows-min gap-8 items-center"> 
+      <div className="grid container auto-rows-min gap-8 items-center">
         <MDEditor
           value={value}
           onChange={setValue}
