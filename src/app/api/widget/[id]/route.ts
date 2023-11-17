@@ -1,7 +1,7 @@
 import prisma from "@/lib/prisma";
 
 async function getArticleByUUID(id: string) {
-	const article = await prisma.article.findUnique({
+	const article = await prisma?.article.findUnique({
 		where: {
 			id: id,
 		}
@@ -11,7 +11,7 @@ async function getArticleByUUID(id: string) {
 
 async function postArticle(userMd: string) {
   let body;
-	const text = await prisma.article.create({
+	const text = await prisma?.article.create({
 		data: {
 			body: userMd
 		}
@@ -31,5 +31,5 @@ export async function POST(request: Request, response: Response,) {
 	console.log(req)
 
 	const res = await postArticle(req.body)
-	return Response.json(res.body)
+	return Response.json(res)
 }
