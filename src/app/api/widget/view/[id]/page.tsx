@@ -2,7 +2,8 @@
 import { useState, useEffect } from 'react'
 
 export default function WidgetViewer({ params }: { params: { id: string } }) {
-  const [response, setResponse] = useState(null)
+  type Response = { data: string } | null
+  const [response, setResponse] = useState<Response>(null)
 
   useEffect(() => {
     fetch(`/api/widget/${params.id}`)
